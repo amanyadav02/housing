@@ -1,0 +1,41 @@
+{% extends 'priceprediction/base.html' %}
+{% load static %}
+{% block title %}
+Services
+{% endblock title %}
+
+{% block body  %}
+        <div class="serv">
+            <h1>Welcome to the CodeHospital Website</h1>
+            <div class="servimg">
+                <img src="{% static 'priceprediction/image/services.jpg' %}" alt="">
+                <p>
+                    This is the best website it provides you many free facilities it is open source .In this CodeHospital you can give the 13 asked feature of the houses and it will return attribute that is the cost of the house by inspecting it all feature very deeply it gives result within seconds.This website provides you the best faculity and we are always with you for any query you may can go to contact.Previous research shows that housing price is affected by the macroeconomy. Li et al. (2018)'s research showed that 1% increase in the Consumer Price Index leads to a $3,559,715 increase in housing prices and raises the property price per square feet by $119.3387. Money Supply (M2) has a positive relationship with housing prices. As M2 increases by one unit, housing prices will rise by 0.0618 in a study conducted in Hong Kong. When there is a 1% increase in the best lending rate, housing prices drop by between $18,237.26 and $28,681.17 in the HAC model. Mortgage repayments lead to a rise in the discount window base rate. A 1% rise in the rate leads to a $14,314.69 drop in housing prices, and an average selling price drop of $585,335.50. As the US real interest rate increases, the interest rates in Hong Kong must follow, increasing the mortgage repayments. When there is a 1% increase in the US real interest rate, the property prices decreased from $9302.845 to $4957.274, and saleable area drops by $4.955206 and $14.01284. When there is a 1% rise in overnight Hong Kong Interbank Offered Rate, the housing prices drop to about 3455.529, and the price per ft2 will drop by $187.3119
+
+                </p>
+            </div>
+            
+        <h1>Enter The Following Features Of The House To Know The Price</h1>
+        <form method="post" action="{% url 'services' %}" class="features">
+            {% csrf_token %}
+            <input required type="number" name="crim" value="" placeholder="per capita crime rate by town" >
+            <input required type="number" name="zn" value="" placeholder="proportion of residential land zoned " >
+            <input required type="number" name="indus" value="" placeholder="proportion of non-retail business acres per town" >
+            <input required type="number" name="chas" value="" placeholder="River dummy variable (= 1 if tract bounds river; 0 otherwise)" >
+            <input required type="number" name="nox"  value="" placeholder="nitric oxides concentration (parts per 10 million)" >
+            <input required type="number" name="rm" value="" placeholder="average number of rooms per dwelling" >
+            <input required type="number" name="age" value="" placeholder="proportion of owner-occupied units
+            " >
+            <input required type="number" name="dis" value="" placeholder="weighted distances to nearest railway station" >
+            <input required type="number" name="rad" value="" placeholder="index of accessibility to radial highways" >
+            <input required type="number" name="tax" value="" placeholder="tax rate of the property" >
+            <input required type="number" name="ptratio" value="" placeholder="pupil-teacher ratio by town" >
+            <input required type="number" name="lstat" value="" placeholder="% lower status of the population" >
+            <input required type="number" name="medv" value="" placeholder="median value of owner-occupied homes " >
+            <button type="submit">submit</button>
+            
+        </form>
+
+        </div>
+
+{% endblock body  %}

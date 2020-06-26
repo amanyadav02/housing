@@ -1,0 +1,35 @@
+
+{% extends 'priceprediction/base.html' %}
+{% load static %}
+
+{% block title %}
+about
+{% endblock title %}
+
+
+{% block body %}
+<div class="about">
+    <img src="{% static 'priceprediction/image/about.jpg' %}" alt="">
+</div>
+<p>Machine learning involves computers discovering how they can perform tasks without being explicitly programmed to do so. It involves computers learning from data provided so that they carry out certain tasks. For simple tasks assigned to computers, it is possible to program algorithms telling the machine how to execute all steps required to solve the problem at hand; on the computer's part, no learning is needed. For more advanced tasks, it can be challenging for a human to manually create the needed algorithms. In practice, it can turn out to be more effective to help the machine develop its own algorithm, rather than have human programmers specify every needed step.
+
+    The discipline of machine learning employs various approaches to help computers learn to accomplish tasks where no fully satisfactory algorithm is available. In cases where vast numbers of potential answers exist, one approach is to label some of the correct answers as valid. This can then be used as training data for the computer to improve the algorithm(s) it uses to determine correct answers. For example, to train a system for the task of digital character recognition, the MNIST dataset has often been used.
+</p>
+<p>Early classifications for machine learning approaches sometimes divided them into three broad categories, depending on the nature of the "signal" or "feedback" available to the learning system. These were:
+    Supervised learning: The computer is presented with example inputs and their desired outputs, given by a "teacher", and the goal is to learn a general rule that maps inputs to outputs.
+    Unsupervised learning: No labels are given to the learning algorithm, leaving it on its own to find structure in its input. Unsupervised learning can be a goal in itself (discovering hidden patterns in data) or a means towards an end (feature learning).
+    Reinforcement learning: A computer program interacts with a dynamic environment in which it must perform a certain goal (such as driving a vehicle or playing a game against an opponent) As it navigates its problem space, the program is provided feedback that's analogous to rewards, which it tries to maximise.
+    
+    Other approaches or processes have since developed that don't fit neatly into this three-fold categorisation, and sometimes more than one is used by the same machine learning system. For example topic modeling, dimensionality reduction or meta learning. As of 2020, deep learning has become the dominant approach for much ongoing work in the field of machine learning .</p>
+<h1 class="team">This website is designed by team CODE HOSPITAL</h1>
+<div class="amangaurav">
+            <div class="aman">
+                <img src="{% static 'priceprediction/image/aman.jpg' %}" alt="">
+                <p><strong>AMAN YADAV</strong> is the founder and ceo of this company and currently he is doing his btech from abes engineering college and he is in 2nd year.He has done his 12th and 10th from the new rsj public school.Currently he is in prayagraj</p>
+            </div>
+            <div class="gaurav">
+                <img src="{% static 'priceprediction/image/gaurav.jpg' %}" alt="">
+                <p><strong>GAURAV DUTT MISRA</strong> is the founder and ceo of this company and currently he is doing his btech from abes engineering college and he is in 2nd year.He has done his 12th and 10th from kendravidalya.currently he is in varanshi.</p>
+            </div>
+</div>
+{% endblock body %}

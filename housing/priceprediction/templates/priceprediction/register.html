@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .regis{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            background-color: black;
+            height: 600px;
+            color: red
+
+        }
+        .regis a{
+            margin: 10px;
+            font-size: 20px;
+        }
+        .reg{
+            color: white;
+        }
+        body h2{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #dc7676;
+        top: 0px;
+        background-color: black;
+        margin: 0px;
+    }
+    </style>
+</head>
+<body>
+    <h2>This is  the best website for the Price prediction of houses</h2>
+    <div class="regis">
+        <h1>This Is Registration Form</h1>
+        <form class="reg" method="get" action="{% url 'register' %}" >
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">submit</button>
+          </form>
+          <a href="{% url 'login' %}">click here to go login page</a>
+    </div>
+</body>
+</html>

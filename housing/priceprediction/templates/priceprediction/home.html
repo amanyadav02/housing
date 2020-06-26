@@ -1,0 +1,19 @@
+
+{% extends 'priceprediction/base.html' %}
+{% load static %}
+{% block title %}
+price
+{% endblock title %}
+
+{% block body %}
+<div class="homi">
+    <div class="homi1">
+        <img src="{% static 'priceprediction/image/home.jpg' %}" alt="">
+    </div>  
+<p>The Price Of The Given Features Of House Is <strong>{{variable }}</strong> Lakhs</p>
+
+</div>
+
+
+
+{% endblock body %}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+    body div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 600px;
+        background-color: black;
+    }
+    .log{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: white;
+        margin: 20px;
+
+    }
+    .log input{
+        margin: 10px;
+        font-size: 15px;
+    }
+    body h1{
+        color: white;
+        text-align: center;
+    }
+    body a{
+        font-size: 15px;
+        color: red;
+    }
+    body h2{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #dc7676;
+        top: 0px;
+        background-color: black;
+    }
+    
+    </style>
+</head>
+<body>
+    <h2>This is  the best website for the Price prediction of houses</h2>
+    <div>
+    <h1>Welcome To Login page</h1>
+    <form  class="log" method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <input placeholder="username" type="text" name="username">
+     <input placeholder="password" type="password" name="password">
+        <button type="submit">submit</button>
+
+    </form>
+    <a href="{% url 'register' %}">Not have account?Click here</a>
+</div>
+
+
+</body>
+</html>

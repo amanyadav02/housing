@@ -1,0 +1,21 @@
+
+{% extends 'priceprediction/base.html' %}
+{% load static %}
+{% block title %}
+contact
+{% endblock title %}
+
+{% block body %}
+<div class="contact">
+    <img src="{% static 'priceprediction/image/contact.jpg' %}" alt="Not available">
+</div>
+<h1 class="contacthead">CONTACT US</h1>
+<form class="forms" method="post" action="{% url 'contact' %}">
+    {% csrf_token %}
+    <input required type="text" placeholder="name" name="name" > 
+    <input required type="email" placeholder="email"  name="email">
+    <input required type="number" placeholder="phone no" name="phone">
+    <textarea required name="textarea" id="" cols="30" rows="10" placeholder="Write your query here"></textarea>
+    <button type="submit" id="conbut">submit</button>
+</form>
+{% endblock body %}
